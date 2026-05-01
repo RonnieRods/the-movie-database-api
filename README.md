@@ -14,3 +14,13 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Site not working?
+
+The site will not work unless you have an API key which you can register and sign up for [here](https://www.themoviedb.org/).
+
+## Next steps
+
+Since the site is ran using Vite React, you need to create an emv file for your private API key from TMDB. To so do simply add a file named .env in the root folder of the app and enter this VITE_TMDB_API_KEY=YourPrivateAPIKeyGoesHere.
+
+Once you save that and relaunch the app, you should see the database API working and enjoy the site at it's fullest!
