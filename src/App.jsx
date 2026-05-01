@@ -128,6 +128,7 @@ function App() {
           ))}
         </div>
         
+        
         {/* Header & Search */}
         <header className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
           <h1 className="text-4xl font-black tracking-tighter text-blue-500">
