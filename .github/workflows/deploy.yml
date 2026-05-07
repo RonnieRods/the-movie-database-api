@@ -49,3 +49,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Build
+        run: npm run build
+        env:
+          # This "injects" the secret into Vite during the build
+          VITE_TMDB_API_KEY: ${{ secrets.VITE_TMDB_API_KEY }}

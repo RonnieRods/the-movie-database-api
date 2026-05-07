@@ -15,6 +15,15 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
+# What does this project involve?
+
+This project involves a list of operations:
+* **Movie/TV Toggle** with dynamic fetching.
+* **Genre Filtering** for both media types.
+* **Cross-page Search** via URL parameters.
+* **Global Watchlist** using React Context.
+* **Detail Pages** with backdrop, cast, trailers and recommendations.
+
 # Site not working?
 
 The site will not work unless you have an API key which you can register and sign up for [here](https://www.themoviedb.org/).
