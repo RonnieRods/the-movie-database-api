@@ -13,7 +13,7 @@ function Home() {
   const [genres, setGenres] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  // Initialize from localStorage or empty array
+  // Initialize from localStorage or empty array 
   const [viewWatchlist, setViewWatchlist] = useState(false);
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
