@@ -16,12 +16,12 @@
       // and hands it to React Router so the correct movie detail page
       // pops up instantly.
       (function(l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&')
+        if (l.search[1] === 'p') {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&') 
           }).join('?');
           window.history.replaceState(null, null,
-            l.pathname.slice(0, l.pathname.lastIndexOf('/')) + decoded.slice(2) + l.hash
+              l.pathname.slice(0, l.pathname.lastIndexOf('/')) + decoded.slice(2) + l.hash
           );
         }
       }(window.location))
