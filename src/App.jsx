@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <WatchlistProvider>
+      {/* Ensure BrowserRouter knows its home base with basename prop */}
       <BrowserRouter basename='/the-movie-database-api'>
         <ScrollToTop /> {/* Fires on every route change */}
         <Routes>

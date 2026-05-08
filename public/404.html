@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CineSync</title>
+    <script type="text/javascript">
+      // This script takes the current URL path and passes it as a search parameter
+      // to index.html so React Router can find it.
+
+      // When someone clicks on a shared link, GitHub doesn't find the
+      // folder and serves 404.html
+
+      // 404.html quickly converts the URL into a "safe" format (a query parameter)
+      // that GitHib does understand
+      var pathSegmentsToKeep = 1; // Set this to 1 for subfolder projects (/the-movie-database-api/)
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

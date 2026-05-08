@@ -5,6 +5,27 @@
     <link rel="icon" type="image/png" href="/favicon.png" title="Food and restaurant icons created by zky.icon - Flaticon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CineSync | Discover Your Next Favorite</title>
+    <script type="text/javascript">
+      // When a user hits a shared link, Github triggers the 404.html
+      // The script in 404.html grabs the URL (like /movie/1318447)
+      // and hides it as a search parameter.
+      // It redirects to the main page, where the index.html script
+      // "unpacks" that parameter and gives the correct path back to React Router
+
+      // This catches the parameter from 404.html, cleans it back up
+      // and hands it to React Router so the correct movie detail page
+      // pops up instantly.
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, l.pathname.lastIndexOf('/')) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
   </head>
   <body>
     <div id="root"></div>
