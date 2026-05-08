@@ -98,7 +98,7 @@ const MovieDetail = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-8">
+        <div className="min-h-screen bg-gray-900 text-white p-4 pt-16">
             {/* Top Navigation Bar with Search */}
             <div className="absolute top-0 left-0 w-full h-[500px] opacity-20 -z-10 blur-sm"
                 className=""
@@ -111,6 +111,26 @@ const MovieDetail = () => {
                 }} 
             >
             </div>
+
+            <nav className="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+                <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+                    {/* Logo / Home Link */}
+                    <Link to="/" className="flex items-center gap-2 group">
+                        <span className="text-2xl group-hover:scale-150 transition-transform">🍿</span>
+                        <p className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+                            CineSync
+                        </p>
+                    </Link>
+
+                    {/* Search Reset / Back Button */}
+                    <button
+                        onClick={() => navigate('/')}
+                        className="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-400"
+                    >
+                        Browse All
+                    </button>
+                </div>
+            </nav>
 
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
                 <button
